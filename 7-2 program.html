@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><body>
+<h3>Window Object Demo</h3>
+<button onclick="showWindow()">Show Window Info</button>
+<pre id="info"></pre>
+
+<script>
+function showWindow() {
+    let info = '';
+    
+    // Properties
+    info += 'Width: ' + window.innerWidth + '\n';
+    info += 'Height: ' + window.innerHeight + '\n';
+    info += 'Location: ' + window.location.href + '\n';
+    info += 'Title: ' + window.document.title + '\n';
+    
+    // Methods
+    info += '\nMethods:\n';
+    window.alert('Alert from window!');
+    window.focus();
+    window.scrollTo(0,0);
+    window.open('about:blank','_blank','width=200,height=200');
+    
+    document.getElementById('info').textContent = info;
+}
+</script>
+</body></html>
